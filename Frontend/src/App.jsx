@@ -1,14 +1,18 @@
-import './App.css'
-import Footer from './components/Footer'
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
-
   return (
     <>
-      <h1 className='text-green-500 font-bold text-3xl'>Mohd Shaqib Raza</h1>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
