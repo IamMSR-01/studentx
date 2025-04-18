@@ -8,7 +8,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Headline Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4"><span className='text-yellow-500'>Everything</span> you <span className='text-blue-600'>need</span> to <span className='text-green-600'>succeed</span></h2>
+          <h2 className="text-4xl font-bold text-white mb-4"><span className='text-yellow-500'>Everything</span> you <span className='text-cyan-500'>need</span> to <span className='text-green-600'>succeed</span></h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             One platform to build your skills, find opportunities, and accelerate your career journey.
           </p>
@@ -17,48 +17,48 @@ const Services = () => {
         {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI Career Guidance */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-xl hover:shadow-blue-600 transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-600 mb-3">AI Career Guidance</h3>
+          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+            <h3 className="text-xl font-semibold text-cyan-500 mb-3">AI Career Guidance</h3>
             <p className="text-gray-300">
               Get personalized career path recommendations and roadmaps based on your skills and interests.
             </p>
           </div>
           
           {/* Resume & LinkedIn Optimizer */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-xl hover:shadow-blue-600 transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-600 mb-3">Resume & LinkedIn Optimizer</h3>
+          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+            <h3 className="text-xl font-semibold text-cyan-500 mb-3">Resume & LinkedIn Optimizer</h3>
             <p className="text-gray-300">
               Build ATS-friendly resumes and optimize your LinkedIn profile with AI suggestions.
             </p>
           </div>
           
           {/* Job & Internship Matching */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-xl hover:shadow-blue-600 transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-600 mb-3">Job & Internship Matching</h3>
+          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+            <h3 className="text-xl font-semibold text-cyan-500 mb-3">Job & Internship Matching</h3>
             <p className="text-gray-300">
               Discover opportunities perfectly aligned with your skills and career goals.
             </p>
           </div>
           
           {/* Skill Assessment */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-xl hover:shadow-blue-600 transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-600 mb-3">Skill Assessment</h3>
+          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+            <h3 className="text-xl font-semibold text-cyan-500 mb-3">Skill Assessment</h3>
             <p className="text-gray-300">
               Test your abilities with AI-generated assessments and earn shareable certificates.
             </p>
           </div>
           
           {/* Accommodation Finder */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-xl hover:shadow-blue-600 transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-600 mb-3">Accommodation Finder</h3>
+          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+            <h3 className="text-xl font-semibold text-cyan-500 mb-3">Accommodation Finder</h3>
             <p className="text-gray-300">
               Find student housing and compatible roommates near your campus or workplace.
             </p>
           </div>
           
           {/* AI Chatbot Assistant */}
-          <div className="bg-white/10 border-2 backdrop-blur-md border-white/20 p-6 rounded-lg shadow-xl hover:shadow-blue-600 transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-600 mb-3">AI Chatbot Assistant</h3>
+          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+            <h3 className="text-xl font-semibold text-cyan-500 mb-3">AI Chatbot Assistant</h3>
             <p className="text-gray-300">
               Get 24/7 help with career questions, resume tips, and more from your personal AI assistant.
             </p>

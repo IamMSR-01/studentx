@@ -10,7 +10,7 @@ export default function Pricing() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">
               <span className="text-yellow-500">Simple</span>,{" "}
-              <span className="text-blue-600">Transparent</span>{" "}
+              <span className="text-cyan-500">Transparent</span>{" "}
               <span className="text-green-600">Pricing</span>
             </h1>
             <p className="text-lg text-gray-300">
@@ -27,7 +27,7 @@ export default function Pricing() {
                 Essential tools to get started
               </p>
               <div className="flex items-baseline mb-6">
-                <span className="text-3xl text-blue-600 font-bold">₹0</span>
+                <span className="text-3xl text-cyan-500 font-bold">₹0</span>
               </div>
               <p className="text-gray-300 mb-6">Forever free</p>
 
@@ -70,12 +70,12 @@ export default function Pricing() {
             </div>
 
             {/* Pro Plan */}
-            <div className="flex justify-between items-center flex-col bg-white/10 border-2 backdrop-blur-md border-white/20 p-8 rounded-lg shadow-xl hover:shadow-blue-600 transition-shadow duration-300 w-80">
-              <h2 className="text-3xl text-blue-600 font-bold mb-2">Pro</h2>
+            <div className="flex justify-between items-center flex-col bg-white/10 border-2 backdrop-blur-md border-white/20 p-8 rounded-lg shadow-xl hover:shadow-cyan-600 transition-shadow duration-300 w-80">
+              <h2 className="text-3xl text-cyan-500 font-bold mb-2">Pro</h2>
               <p className="text-gray-300 mb-6">Full access to all features</p>
               <div className="flex items-baseline mb-6">
-                <span className="text-3xl text-blue-600 font-bold">₹199</span>
-                <span className="text-blue-600 ml-2">per month</span>
+                <span className="text-3xl text-cyan-500 font-bold">₹199</span>
+                <span className="text-cyan-500 ml-2">per month</span>
               </div>
 
               <div className="space-y-4 mb-8">
@@ -135,7 +135,7 @@ export default function Pricing() {
                 </div>
               </div>
 
-              <Link className="flex justify-center items-center w-full py-3 border-2 border-white/20 rounded-md text-white bg-blue-600 font-medium hover:bg-blue-400">
+              <Link className="flex justify-center items-center w-full py-3 border-2 border-white/20 rounded-md text-white bg-cyan-500 font-medium hover:bg-cyan-600">
                 Start Pro Trial
               </Link>
             </div>
@@ -149,7 +149,7 @@ export default function Pricing() {
                 For universities & organizations
               </p>
               <div className="flex items-baseline mb-6">
-                <span className="text-2xl text-blue-600 font-bold">Custom</span>
+                <span className="text-2xl text-cyan-500 font-bold">Custom</span>
               </div>
               <p className="text-gray-300 mb-6">Contact for pricing</p>
 

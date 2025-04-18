@@ -9,12 +9,12 @@ const FAQItem = ({ question, answer }) => {
   };
 
   return (
-    <div className="bg-white/10 mx-auto border-2 border-white/20 p-2 rounded-lg shadow-lg hover:shadow-blue-600 transition-shadow duration-300 overflow-hidden mb-6">
+    <div className="bg-white/10 mx-auto border-2 border-white/20 p-2 rounded-lg shadow-lg hover:shadow-cyan-600 transition-shadow duration-300 overflow-hidden mb-6">
       <button
         className="w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none"
         onClick={toggleAccordion}
       >
-        <span className="text-lg font-medium text-blue-600">{question}</span>
+        <span className="text-lg font-medium text-cyan-500">{question}</span>
         <span className="text-gray-300 text-xl">{isOpen ? "▲" : "▼"}</span>
       </button>
 
@@ -60,7 +60,7 @@ const FAQ = () => {
     <div>
       <div className="max-w-5xl mx-auto py-12 px-4">
         <h1 className="text-4xl text-white font-bold text-center mb-2">
-          Frequently Asked <span className="text-blue-600">Questions</span>
+          Frequently Asked <span className="text-cyan-500">Questions</span>
         </h1>
         <p className="text-center text-gray-300 mt-4 mb-12">
           Get answers to common questions about StudentX

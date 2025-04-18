@@ -63,17 +63,17 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex justify-between items-center flex-col bg-white/10 border-2 backdrop-blur-md border-white/20 p-6 rounded-lg shadow-xl hover:shadow-yellow-500 transition-shadow duration-300 w-80"
+                className="flex justify-between items-center flex-col bg-white/10 border-2 backdrop-blur-md border-white/20 p-6 rounded-lg shadow-lg hover:shadow-yellow-500 transition-shadow duration-300 w-80"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-black font-bold mr-4">
+                  <div className="w-10 h-10 rounded-full bg-cyan-500 flex items-center justify-center text-black font-bold mr-4">
                     {testimonial.initial}
                   </div>
                   <div>
                     <h3 className="font-bold text-yellow-500">
                       {testimonial.name}
                     </h3>
-                    <p className="text-sm text-blue-400">{testimonial.role}</p>
+                    <p className="text-sm text-cyan-400">{testimonial.role}</p>
                   </div>
                 </div>
 
