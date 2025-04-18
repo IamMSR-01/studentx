@@ -11,5 +11,8 @@
     "StudentX"
   ],
   "author": "Mohd Shaqib Raza",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
