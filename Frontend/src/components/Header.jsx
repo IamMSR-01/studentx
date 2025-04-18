@@ -10,8 +10,9 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="flex justify-between items-center px-[8%] py-4 bg-white shadow-2xl">
-        <a href="#" className="text-2xl font-bold text-gray-800 no-underline">
+      <nav className="flex justify-between w-full fixed top-0 z-50 backdrop-blur-md items-center py-4 bg-white/10 shadow-2xl border-2 border-white/20 rounded-2xl mt-2 px-30">
+        <a href="#" className="text-3xl font-bold text-blue-600
+         no-underline">
           StudentX
         </a>
 
@@ -23,7 +24,7 @@ const Header = () => {
           <li className="py-4 md:py-0 md:px-5">
             <a
               href="#"
-              className="no-underline text-gray-700 text-lg font-medium hover:text-gray-500 transition-colors"
+              className="no-underline text-blue-600 text-xl font-semibold hover:text-blue-400 "
             >
               Features
             </a>
@@ -31,7 +32,7 @@ const Header = () => {
           <li className="py-4 md:py-0 md:px-5">
             <a
               href="#"
-              className="no-underline text-gray-700 text-lg font-medium hover:text-gray-500 transition-colors"
+              className="no-underline text-blue-600 text-lg font-medium hover:text-blue-400 transition-colors"
             >
               Careers
             </a>
@@ -39,7 +40,7 @@ const Header = () => {
           <li className="py-4 md:py-0 md:px-5">
             <a
               href="#"
-              className="no-underline text-gray-700 text-lg font-medium hover:text-gray-500 transition-colors"
+              className="no-underline text-blue-600 text-lg font-medium hover:text-blue-400 transition-colors"
             >
               Pricing
             </a>
@@ -47,7 +48,7 @@ const Header = () => {
           <li className="py-4 md:py-0 md:px-5">
             <a
               href="#"
-              className="no-underline text-gray-700 text-lg font-medium hover:text-gray-500 transition-colors"
+              className="no-underline text-blue-600 text-lg font-medium hover:text-blue-400 transition-colors"
             >
               About Us
             </a>
@@ -61,15 +62,15 @@ const Header = () => {
         >
           <Link
             to="/login"
-            className="px-6 py-3 rounded-full text-base font-medium cursor-pointer transition-all border border-gray-200 bg-transparent text-gray-700 hover:bg-gray-100"
+            className="px-6 py-1 rounded-2xl text-lg font-semibold cursor-pointer transition-all border-2 border-white/20 bg-transparent text-blue-600 hover:bg-blue-700 hover:text-white hover:border-white"
           >
             Log In
           </Link>
           <Link
             to={"/signup"}
-            className="px-6 py-3 rounded-full text-base font-medium cursor-pointer transition-all bg-[#40b3b8] text-white border-none hover:bg-[#35a0a5]"
+            className="px-8 py-1 flex justify-center items-center rounded-2xl text-base font-medium cursor-pointer transition-all bg-blue-600 text-white hover:bg-white/10 border-2 border-white hover:text-blue-600"
           >
-            Sign Up Free
+            Sign Up
           </Link>
         </div>
 

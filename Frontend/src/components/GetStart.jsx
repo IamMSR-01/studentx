@@ -1,26 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Line from './Line';
 
 export default function GetStart() {
   return (
-    <div className="flex items-center justify-center bg-gray-100 p-8">
-      <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl w-full">
+   <div>
+     <div className="flex items-center justify-center mt-20 mb-10 p-8 ">
+      <div className="rounded-lg p-10 max-w-5xl w-full bg-white/10 border-2 border-white/20 shadow-xl hover:shadow-blue-600 transition-shadow duration-300">
         <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold text-gray-800 mb-3">Ready to accelerate your career?</h2>
-          <p className="text-gray-600">
+          <h2 className="text-5xl font-bold text-blue-600 mb-3">Ready to <span className='text-yellow-500'>accelerate</span> your career?</h2>
+          <p className="text-gray-300 mt-6 font-serif">
             Join thousands of students using StudentX to build skills, find opportunities, and 
             launch their careers.
           </p>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <button className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-6 rounded-full transition-colors">
+        <div className="flex flex-wrap justify-center gap-4 mt-8">
+          <Link className="bg-green-600 hover:bg-green-400 text-white font-medium py-2 px-6 rounded-xl transition-colors">
             Sign Up Free Today
-          </button>
-          <button className="text-gray-700 hover:text-gray-900 font-medium py-2 px-6 transition-colors">
+          </Link>
+          <Link className="bg-blue-600 hover:bg-blue-400 text-white font-medium py-2 px-6 rounded-xl transition-colors">
             See Demo
-          </button>
+          </Link>
         </div>
       </div>
     </div>
+    <div className='mt-20 mb-10'>
+      <Line />
+    </div>
+   </div>
   );
 }

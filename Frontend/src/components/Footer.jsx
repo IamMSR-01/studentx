@@ -6,13 +6,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Title / Brand */}
         <div>
-          <h2 className="text-xl font-bold mb-4">StudentX</h2>
+          <h2 className="text-3xl text-blue-600 font-bold mb-4">StudentX</h2>
           <p className="text-sm text-gray-400 mb-4">
             AI-powered career guidance and education platform for students.
           </p>
 
           {/* Social Media Links */}
-          <div className="flex space-x-4 text-gray-400 text-lg">
+          <div className="flex space-x-4 text-blue-600 text-lg">
             <a href="#" className="hover:text-white">
               <FaFacebookF />
             </a>
