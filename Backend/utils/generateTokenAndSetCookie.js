@@ -1,19 +1,18 @@
-import express from "express";
-import {
-  createSubscription,
-  getAllSubscriptions,
-  getSubscriptionById,
-  updateSubscription,
-  cancelSubscription,
-} from "../controller/subscription.controller.js";
-import protect from "../middleware/auth.middleware.js";
+import jwt from "jsonwebtoken";
 
-const router = express.Router();
+export const generateTokenAndSetCookie = (res, userID) => {
+  const token = jwt.sign({ userID }, process.env.JWT_SECRET, {
+    expiresIn: "1d",
+  });
 
-router.post("/", protect, createSubscription); // Create
-router.get("/", protect, getAllSubscriptions); // All subs
-router.get("/:id", protect, getSubscriptionById); // Single sub
-router.put("/:id", protect, updateSubscription); // Update
-router.delete("/:id", protect, cancelSubscription); // Cancel/Delete
+  res.cookie("token", token, {
+    httpOnly: true,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    sameSite: "Strict",
+    secure: true,
+  });
 
-export default router;
+  return token;
+};
+
+// export default generateTokenAndSetCookie;

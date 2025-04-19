@@ -1,5 +1,4 @@
 import FreelanceProject from "../models/freelancing.model.js";
-import User from "../models/user.models.js";
 
 // Create a new freelance project
 export const createFreelanceProject = async (req, res) => {

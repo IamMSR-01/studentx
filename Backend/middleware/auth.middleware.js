@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../models/user.models.js";
+import User from "../models/user.model.js";
 import FreelanceProject from "../models/freelancing.model.js";
 
 const protect = async (req, res, next) => {

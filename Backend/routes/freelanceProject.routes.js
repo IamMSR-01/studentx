@@ -1,4 +1,6 @@
 import express from "express";
+
+import protect from "../middleware/auth.middleware.js";
 import {
   createFreelanceProject,
   getAllFreelanceProjects,
@@ -7,7 +9,6 @@ import {
   deleteFreelanceProject,
   submitProposal,
 } from "../controller/freelanceProject.controller.js";
-import protect from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 

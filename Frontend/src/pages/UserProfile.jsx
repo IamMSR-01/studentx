@@ -1,22 +1,33 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Line from '../components/Line';
-// import { Link } from 'react-router-dom';
+import API from "../utils/axios"
+import useLoggedInUser from '../services/useLoggedInUser';
 
 const UserProfile = () => {
+  
   const [isEditing, setIsEditing] = useState(false);
   const [userData, setUserData] = useState({
-    name: 'Priya Sharma',
-    email: 'priya@studentx.com',
-    bio: 'Computer Science Student | Aspiring UX Designer',
-    location: 'Mumbai, India',
-    skills: ['UI/UX Design', 'Python', 'React', 'Figma'],
-    plan: 'Pro'
+    name: "",
+    email: "",
+
   });
 
-  const handleSave = () => {
-    setIsEditing(false);
-    // Add save logic here
-  };
+  useEffect(()=>{
+    fetchUser()
+  },[])
+
+
+const user = useLoggedInUser();
+console.log(user);
+
+const fetchUser = async ()=>{
+  const res = await API.get("/auth/")  
+  console.log( "res", res);
+  setUserData({
+    name: res.data.name,
+    email: res.data.email,
+  })
+}
 
   return (
    <div>
@@ -80,22 +91,22 @@ const UserProfile = () => {
             </div>
 
             {/* Skills & Expertise */}
-            <div className="bg-blue-500/10 p-6 rounded-lg shadow-sm border-2 border-white/20">
-              <h3 className="text-lg text-cyan-500 font-semibold mb-4">Skills & Expertise</h3>
-              <div className="flex flex-wrap gap-2">
-                {userData.skills.map((skill, index) => (
-                  <span 
-                    key={index}
-                    className="px-4 py-1 bg-cyan-500 text-black rounded-xl text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+              {/* <div className="bg-blue-500/10 p-6 rounded-lg shadow-sm border-2 border-white/20">
+                <h3 className="text-lg text-cyan-500 font-semibold mb-4">Skills & Expertise</h3>
+                <div className="flex flex-wrap gap-2">
+                  {userData.skills.map((skill, index) => (
+                    <span 
+                      key={index}
+                      className="px-4 py-1 bg-cyan-500 text-black rounded-xl text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div> */}
 
             {/* Subscription Plan */}
-            <div className="bg-blue-500/10 p-6 rounded-lg shadow-sm border-2 border-white/20">
+            {/* <div className="bg-blue-500/10 p-6 rounded-lg shadow-sm border-2 border-white/20">
               <h3 className="text-lg text-cyan-500 font-semibold mb-4">Your Plan</h3>
               <div className="flex items-center justify-between bg-cyan-500 p-4 rounded-lg">
                 <div>
@@ -110,7 +121,7 @@ const UserProfile = () => {
                   {userData.plan === 'Pro' ? 'Manage Plan' : 'Upgrade to Pro'}
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
