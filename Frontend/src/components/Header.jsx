@@ -11,8 +11,11 @@ const Header = () => {
   return (
     <div className="w-full">
       <nav className="flex justify-between w-full fixed top-0 z-50 backdrop-blur-md items-center py-4 bg-white/10 shadow-2xl border-2 border-white/20 rounded-2xl mt-2 px-30">
-        <a href="#" className="text-3xl font-bold text-cyan-400
+        <a href="#" className="text-3xl flex justify-center items-center font-bold text-cyan-400
          no-underline">
+          <img 
+          className="w-10 h-10 inline-block mr-4 border-2 border-cyan-500 rounded-xl"
+          src="StudentX-logo.png" alt="" />
           StudentX
         </a>
 

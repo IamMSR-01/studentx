@@ -6,7 +6,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Title / Brand */}
         <div>
-          <h2 className="text-3xl text-cyan-500 font-bold mb-4">StudentX</h2>
+          <h2 className="text-3xl flex items-center text-cyan-500 font-bold mb-4">
+            <img 
+            className="w-12 h-12 inline-block border-2 border-cyan-500 rounded-xl mr-4"
+            src="StudentX-logo.png" alt="" />
+            StudentX</h2>
           <p className="text-sm text-gray-400 mb-4">
             AI-powered career guidance and education platform for students.
           </p>

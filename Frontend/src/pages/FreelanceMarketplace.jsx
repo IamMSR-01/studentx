@@ -20,19 +20,19 @@ const FreelanceMarketplace = () => {
       name: "Alex Morgan",
       role: "UI Designer",
       text: "FreelanceX helped me find my niche and triple my client base in just 2 months.",
-      image: "/api/placeholder/64/64",
+      image: "https://images.pexels.com/photos/4639524/pexels-photo-4639524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
       name: "Sarah Johnson",
       role: "Content Writer",
       text: "The pricing assistant helped me realize I was undercharging by 40%.",
-      image: "/api/placeholder/64/64",
+      image: "https://images.pexels.com/photos/4639524/pexels-photo-4639524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
       name: "Michael Chen",
       role: "Full-Stack Developer",
       text: "The skill assessments gave me confidence. My income has increased by 65%.",
-      image: "/api/placeholder/64/64",
+      image: "https://images.pexels.com/photos/4639524/pexels-photo-4639524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
   ];
 
