@@ -13,6 +13,10 @@ import JobFinder from "./pages/JobFinder.jsx";
 import CareerGuidance from "./pages/CareerGuidance.jsx";
 import RoomFinder from "./pages/RoomFinder.jsx";
 import SkillAssessment from "./pages/SkillAssessment.jsx";
+import Resources from "./pages/Resources.jsx";
+import PaymentMethods from "./pages/PaymentMethod.jsx";
+import Mentorship from "./pages/Mentorship.jsx";
+import FreelanceMarketplace from "./pages/FreelanceMarketplace.jsx";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +60,22 @@ const router = createBrowserRouter([
       {
         path: "/skill-assignment",
         element: <SkillAssessment />
+      },
+      {
+        path: "/educational-resources",
+        element: <Resources />
+      },
+      {
+        path: "/payment-methods",
+        element: <PaymentMethods />
+      },
+      {
+        path: "/mentorship",
+        element: <Mentorship />,
+      },
+      {
+        path: "/freelance-marketplace",
+        element: <FreelanceMarketplace />
       }
     ],
   },

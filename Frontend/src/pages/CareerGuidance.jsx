@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const CareerGuidance = () => {
   const [selectedCareer, setSelectedCareer] = useState('UI/UX Designer');
@@ -44,16 +45,16 @@ const CareerGuidance = () => {
   ];
 
   const currentCareer = careerPaths.find(career => career.title === selectedCareer);
-  
+
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-black to-cyan-900 p-8">
+      <div className="max-w-7xl mt-30 pb-20 mx-auto">
         <div className="flex justify-between mb-2">
           <div>
-            <h1 className="text-3xl font-bold text-gray-700">Career Guidance</h1>
-            <p className="text-gray-500">Discover and plan your ideal career path</p>
+            <h1 className="text-3xl font-bold text-cyan-500">Career Guidance</h1>
+            <p className="text-gray-300">Discover and plan your ideal career path</p>
           </div>
-          <button className="flex items-center text-gray-600 hover:text-gray-800">
+          <button className="flex items-center bg-cyan-500 px-6 rounded-xl text-black hover:bg-cyan-400">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
@@ -63,32 +64,44 @@ const CareerGuidance = () => {
         
         <div className="flex space-x-8 mt-8">
           {/* Left Side: Career Path Selector */}
-          <div className="w-1/3 bg-white rounded-lg p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-700 mb-4">Career Path Selector</h2>
+          <motion.div
+            className="w-1/3 bg-white/10 border-2 border-white/20 rounded-lg p-6 shadow-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-xl font-bold text-cyan-500 mb-4">Career Path Selector</h2>
             
             {careerPaths.map(career => (
-              <div 
+              <motion.div 
                 key={career.title}
-                className={`mb-4 p-4 rounded-lg cursor-pointer ${selectedCareer === career.title ? 'bg-gray-100' : ''}`}
+                className={`mb-4 p-4 rounded-lg cursor-pointer ${selectedCareer === career.title ? 'bg-cyan-500/50' : ''}`}
                 onClick={() => setSelectedCareer(career.title)}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
               >
                 <div className="flex justify-between items-center mb-1">
-                  <h3 className="font-bold text-gray-700">{career.title}</h3>
+                  <h3 className="font-bold text-gray-300">{career.title}</h3>
                   <div className="text-right">
-                    <span className="block font-bold text-gray-800">{career.match}%</span>
-                    <span className="text-sm text-gray-600">Match</span>
+                    <span className="block font-bold text-gray-400">{career.match}%</span>
+                    <span className="text-sm text-gray-400">Match</span>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm">{career.description}</p>
-              </div>
+                <p className="text-gray-400 text-sm">{career.description}</p>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           
           {/* Right Side: Selected Career Details */}
-          <div className="w-2/3 bg-white rounded-lg p-6 shadow-sm">
+          <motion.div
+            className="w-2/3 bg-white/10 border-2 border-white/20 rounded-lg p-6 shadow-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-700">{currentCareer.title}</h2>
-              <div className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+              <h2 className="text-2xl font-bold text-cyan-500">{currentCareer.title}</h2>
+              <div className="px-3 py-1 bg-cyan-500 rounded-full text-sm">
                 Match: <span className="font-bold">{currentCareer.match}%</span>
               </div>
             </div>
@@ -96,31 +109,33 @@ const CareerGuidance = () => {
             {/* Tabs */}
             <div className="flex border-b mb-6">
               {['Career Roadmap', 'Skills Required', 'Learning Resources'].map(tab => (
-                <button
+                <motion.button
                   key={tab}
                   className={`px-4 py-2 text-sm font-medium ${activeTab === tab 
-                    ? 'text-gray-800 border-b-2 border-blue-500' 
-                    : 'text-gray-500 hover:text-gray-700'}`}
+                    ? 'text-gray-400 border-b-2 border-blue-500' 
+                    : 'text-gray-300 hover:text-gray-400'}`}
                   onClick={() => setActiveTab(tab)}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
                 >
                   {tab}
-                </button>
+                </motion.button>
               ))}
             </div>
             
             {/* Career Description */}
-            <p className="text-gray-600 mb-6">{currentCareer.description}</p>
+            <p className="text-gray-200 mb-6">{currentCareer.description}</p>
             
             {/* Roadmap */}
             {activeTab === 'Career Roadmap' && (
-              <div className="space-y-4">
+              <div className="space-y-4 text-white">
                 {currentCareer.roadmap.map((step, index) => (
                   <div key={index} className="relative">
-                    <div className={`flex items-center mb-1 ${step.completed ? 'text-gray-800' : 'text-gray-500'}`}>
+                    <div className={`flex items-center mb-1 ${step.completed ? 'text-gray-200' : 'text-gray-200'}`}>
                       <div className={`w-6 h-6 rounded-full flex items-center justify-center mr-3 ${
                         step.completed 
                           ? 'bg-green-500 text-white' 
-                          : 'bg-gray-200 text-gray-500'
+                          : 'bg-gray-200 text-gray-300'
                       }`}>
                         {step.completed ? (
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -130,7 +145,7 @@ const CareerGuidance = () => {
                           <span>{index + 1}</span>
                         )}
                       </div>
-                      <span className={`font-medium ${step.completed ? 'text-gray-800' : 'text-gray-600'}`}>
+                      <span className={`font-medium ${step.completed ? 'text-gray-200' : 'text-gray-400'}`}>
                         {step.step}
                       </span>
                     </div>
@@ -149,17 +164,17 @@ const CareerGuidance = () => {
             {/* Skills Required Tab Content */}
             {activeTab === 'Skills Required' && (
               <div className="space-y-4">
-                <p className="text-gray-600">Content for Skills Required would go here.</p>
+                <p className="text-gray-200">Content for Skills Required would go here.</p>
               </div>
             )}
             
             {/* Learning Resources Tab Content */}
             {activeTab === 'Learning Resources' && (
               <div className="space-y-4">
-                <p className="text-gray-600">Content for Learning Resources would go here.</p>
+                <p className="text-gray-200">Content for Learning Resources would go here.</p>
               </div>
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
