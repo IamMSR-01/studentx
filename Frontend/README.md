@@ -1,12 +1,56 @@
-# React + Vite
+# StudentX - Learn. Build. Thrive.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+StudentX is an AI-powered platform designed to empower students and professionals by providing tools, resources, and services to enhance their career and educational journey. The platform offers personalized career guidance, job and internship matching, freelancing opportunities, skill assessments, mentorship, and much more.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Folder Structure](#folder-structure)
+4. [Setup Instructions](#setup-instructions)
+5. [Backend API Documentation](#backend-api-documentation)
+6. [Frontend Key Pages](#frontend-key-pages)
+7. [How It Works](#how-it-works)
+8. [License](#license)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+### Core Features:
+- **AI Career Guidance**: Personalized career roadmaps and skill recommendations.
+- **Job Finder**: Discover jobs and internships tailored to your skills.
+- **Freelance Marketplace**: Tools for freelancers to find gigs, optimize profiles, and manage finances.
+- **Skill Assessment**: AI-powered assessments with shareable certificates.
+- **Mentorship**: Book sessions with industry experts.
+- **Educational Resources**: Curated courses, certifications, and tutorials.
+- **Accommodation Finder**: Find student housing and compatible roommates.
+- **AI Chatbot Assistant**: 24/7 career and education support.
+
+### Additional Features:
+- **Admin Dashboard**: Manage users, resources, and analytics.
+- **Regional Language Support**: Resources in multiple Indian languages.
+- **Mental Health Resources**: Tools and techniques for stress management and productivity.
+- **Subscription Plans**: Flexible plans for students, professionals, and organizations.
+
+---
+
+## Tech Stack
+
+### Frontend:
+- **Framework**: React.js
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **Build Tool**: Vite
+
+### Backend:
+- **Framework**: Node.js with Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Cloud Services**: Cloudinary (for image uploads)
+
+---
+
+## Folder Structure
