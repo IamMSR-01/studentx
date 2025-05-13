@@ -106,7 +106,7 @@ const fetchUser = async ()=>{
               </div> */}
 
             {/* Subscription Plan */}
-            {/* <div className="bg-blue-500/10 p-6 rounded-lg shadow-sm border-2 border-white/20">
+            <div className="bg-blue-500/10 p-6 rounded-lg shadow-sm border-2 border-white/20">
               <h3 className="text-lg text-cyan-500 font-semibold mb-4">Your Plan</h3>
               <div className="flex items-center justify-between bg-cyan-500 p-4 rounded-lg">
                 <div>
@@ -121,7 +121,7 @@ const fetchUser = async ()=>{
                   {userData.plan === 'Pro' ? 'Manage Plan' : 'Upgrade to Pro'}
                 </button>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

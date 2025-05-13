@@ -13,7 +13,7 @@ import authenticateUser from "../middleware/authenticateUser.js";
 
 const router = express.Router();
 
-router.post("/signup", upload.single("avatar"), signup);
+router.post("/signup", signup);
 router.post("/login", login);
 router.post("/logout", logout);
 router.get("/:id", getUserById);

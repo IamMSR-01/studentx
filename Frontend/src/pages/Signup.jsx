@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Line from "../components/Line";
 import API from "../utils/axios";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -8,29 +9,27 @@ const Signup = () => {
     email: "",
     password: "",
     phone: "",
-    avatar: null,
+    // avatar: "",
   });
 
-  
-  const handleChange = (e) => {
+  const navigate = useNavigate();
 
+  const handleChange = (e) => {
     const { name, value } = e.target;
-      setFormData({ ...formData, [name]: value });
-  }
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await API.post("/auth/signup", formData);
       console.log(response.data);
+      navigate("/user-profile");
     } catch (error) {
       console.error("Error signing up:", error);
     }
-  }
-
-
-
+  };
 
   return (
     <div className="mt-20 mb-10">
@@ -39,15 +38,17 @@ const Signup = () => {
           <h2 className="text-3xl font-bold text-center text-cyan-500 mb-8">
             Sign Up for StudentX
           </h2>
-          <form onSubmit={handleSubmit} > 
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label className="block text-sm text-gray-400 mb-1">Full Name</label>
+              <label className="block text-sm text-gray-400 mb-1">
+                Full Name
+              </label>
               <input
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Enter your full name"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+                className="w-full px-3 py-2 border text-white border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
                 required
               />
             </div>
@@ -60,33 +61,37 @@ const Signup = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="you@example.com"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+                className="w-full px-3 py-2 border text-white border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
                 required
               />
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm text-gray-400 mb-1">Password</label>
+              <label className="block text-sm text-gray-400 mb-1">
+                Password
+              </label>
               <input
                 name="password"
                 type="password"
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="••••••••"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+                className="w-full px-3 py-2 border text-white border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
                 required
               />
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm text-gray-400 mb-1">Phone Number</label>
+              <label className="block text-sm text-gray-400 mb-1">
+                Phone Number
+              </label>
               <input
                 name="phone"
                 type="text"
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+91XXXXXXXXXX"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+                className="w-full px-3 py-2 border text-white border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
                 required
               />
             </div>
@@ -101,7 +106,10 @@ const Signup = () => {
 
           <div className="mt-6 text-center text-sm text-gray-400">
             Already have an account?{" "}
-            <a href="#" className="text-cyan-500 hover:text-cyan-600 font-medium">
+            <a
+              href="#"
+              className="text-cyan-500 hover:text-cyan-600 font-medium"
+            >
               Sign in here
             </a>
           </div>

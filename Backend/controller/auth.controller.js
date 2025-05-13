@@ -6,7 +6,7 @@ import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js
 import { error } from "console";
 export const signup = async (req, res) => {
   try {
-    const { name, email, password, phone, role } = req.body;
+    const { name, email, password, phone } = req.body;
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -41,7 +41,7 @@ export const signup = async (req, res) => {
       email,
       password,
       phone,
-      role,
+      role : "user",
       avatar: avatarUrl,
     });
 
