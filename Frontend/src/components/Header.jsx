@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="w-full">
       <nav className="flex justify-between w-full fixed top-0 z-50 backdrop-blur-md items-center py-4 bg-white/10 shadow-2xl border-2 border-white/20 rounded-2xl mt-2 px-30">
-        <a href="#" className="text-3xl flex justify-center items-center font-bold text-cyan-400
+        <a href="/" className="text-3xl flex justify-center items-center font-bold text-cyan-400
          no-underline">
           <img 
           className="w-10 h-10 inline-block mr-4 border-2 border-cyan-500 rounded-xl"
@@ -26,15 +26,15 @@ const Header = () => {
         >
           <li className="py-4 md:py-0 md:px-5">
             <a
-              href="#"
+              href="/educational-resources"
               className="no-underline text-cyan-400 text-xl font-semibold hover:text-cyan-500 "
             >
-              Features
+              Resources
             </a>
           </li>
           <li className="py-4 md:py-0 md:px-5">
             <a
-              href="#"
+              href="/career-guidance"
               className="no-underline text-cyan-400 text-lg font-medium hover:text-cyan-500 transition-colors"
             >
               Careers
@@ -42,18 +42,42 @@ const Header = () => {
           </li>
           <li className="py-4 md:py-0 md:px-5">
             <a
-              href="#"
+              href="/job-finder"
               className="no-underline text-cyan-400 text-lg font-medium hover:text-cyan-500 transition-colors"
             >
-              Pricing
+              Jobs
             </a>
           </li>
           <li className="py-4 md:py-0 md:px-5">
             <a
-              href="#"
+              href="/skill-assignment"
               className="no-underline text-cyan-400 text-lg font-medium hover:text-cyan-500 transition-colors"
             >
-              About Us
+              Skills
+            </a>
+          </li>
+          <li className="py-4 md:py-0 md:px-5">
+            <a
+              href="/room-finder"
+              className="no-underline text-cyan-400 text-lg font-medium hover:text-cyan-500 transition-colors"
+            >
+              Houshing
+            </a>
+          </li>
+          <li className="py-4 md:py-0 md:px-5">
+            <a
+              href="/freelance-marketplace"
+              className="no-underline text-cyan-400 text-lg font-medium hover:text-cyan-500 transition-colors"
+            >
+              Freelancing
+            </a>
+          </li>
+          <li className="py-4 md:py-0 md:px-5">
+            <a
+              href="/mentorship"
+              className="no-underline text-cyan-400 text-lg font-medium hover:text-cyan-500 transition-colors"
+            >
+              Mentorship
             </a>
           </li>
         </ul>
@@ -69,12 +93,12 @@ const Header = () => {
           >
             Log In
           </Link>
-          <Link
+          {/* <Link
             to={"/signup"}
             className="px-8 py-1 flex justify-center items-center rounded-2xl text-base font-medium cursor-pointer transition-all bg-cyan-400 text-white hover:bg-white/10 border-2 border-white/20 hover:text-cyan-400"
           >
             Sign Up
-          </Link>
+          </Link> */}
         </div>
 
         <div

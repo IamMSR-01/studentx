@@ -17,12 +17,12 @@ const Services = () => {
         {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI Career Guidance */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+          <a href='/career-guidance' className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
             <h3 className="text-xl font-semibold text-cyan-500 mb-3">AI Career Guidance</h3>
             <p className="text-gray-300">
               Get personalized career path recommendations and roadmaps based on your skills and interests.
             </p>
-          </div>
+          </a>
           
           {/* Resume & LinkedIn Optimizer */}
           <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
@@ -33,28 +33,28 @@ const Services = () => {
           </div>
           
           {/* Job & Internship Matching */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+          <a href='/job-finder' className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
             <h3 className="text-xl font-semibold text-cyan-500 mb-3">Job & Internship Matching</h3>
             <p className="text-gray-300">
               Discover opportunities perfectly aligned with your skills and career goals.
             </p>
-          </div>
+          </a>
           
           {/* Skill Assessment */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+          <a href='/skill-assignment' className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
             <h3 className="text-xl font-semibold text-cyan-500 mb-3">Skill Assessment</h3>
             <p className="text-gray-300">
               Test your abilities with AI-generated assessments and earn shareable certificates.
             </p>
-          </div>
+          </a>
           
           {/* Accommodation Finder */}
-          <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
+          <a href='/room-finder' className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">
             <h3 className="text-xl font-semibold text-cyan-500 mb-3">Accommodation Finder</h3>
             <p className="text-gray-300">
               Find student housing and compatible roommates near your campus or workplace.
             </p>
-          </div>
+          </a>
           
           {/* AI Chatbot Assistant */}
           <div className="bg-white/10 border-2 border-white/20 p-6 rounded-lg shadow-lg hover:shadow-cyan-500 transition-shadow duration-300">

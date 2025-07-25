@@ -10,7 +10,7 @@ function App() {
       <main>
         <Outlet />
         {/* Chat button */}
-      <div className="fixed bottom-6 right-6">
+      <a href="/chat-bot" className="fixed bottom-6 right-6">
         <button className="bg-cyan-500 hover:bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-colors">
           <svg
             className="w-6 h-6"
@@ -27,7 +27,7 @@ function App() {
             ></path>
           </svg>
         </button>
-      </div>
+      </a>
       </main>
       <Footer />
     </>

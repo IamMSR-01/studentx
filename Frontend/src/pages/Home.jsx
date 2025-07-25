@@ -8,7 +8,7 @@ import FAQ from "../components/FAQ";
 import GetStart from "../components/GetStart";
 import Line from "../components/Line";
 
-const Home = () => {
+const Home = () => {  
   return (
     <div>
       <section className="h-screen max-w-8xl mx-auto py-20 px-6 md:px-12">
@@ -50,13 +50,10 @@ const Home = () => {
           {/* Right Card */}
           <div className="flex-1 bg-white/10 shadow-2xl rounded-2xl p-4">
             <div className="bg-white/10 h-[450px] shadow-2xl rounded-xl px-10 py-14 text-center relative flex flex-col items-center justify-center">
-              <div className="text-4xl mb-4">🎯</div>
-              <h2 className="text-xl font-semibold mb-2 text-white">
-                StudentX Dashboard
-              </h2>
-              <p className="text-gray-300">
-                Your personalized career journey assistant
-              </p>
+              <img
+                src="https://imgs.search.brave.com/iEDgXG8ZCkAHuiybv_IfUtrBK85avIOo89G5TCIgPbE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Ym9sZGJpLmNvbS93/cC9wYWdlcy9kYXNo/Ym9hcmRzL2VkdWNh/dGlvbi9lZHVjYXRp/b24ud2VicA"
+                alt=""
+              />
 
               {/* Badge Top Right */}
               <div className="absolute top-4 right-4 bg-cyan-500 shadow px-4 py-2 rounded-full flex items-center gap-2 text-sm">
@@ -72,7 +69,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
       </section>
       <Line />
       <Services />

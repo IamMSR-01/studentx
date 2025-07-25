@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import chatRoutes from "./routes/chat.routes.js";
 
 import authRoutes from "./routes/auth.routes.js";
 import freelanceProjectRoutes  from "./routes/freelanceProject.routes.js";
@@ -16,6 +17,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 app.use(express.json());
 app.use(cookieParser());
+
+
+app.use("/api/v1/chat", chatRoutes);
 
 app.use("/api/v1/auth", authRoutes);
 // app.use("/api/v1/freelance-projects", freelanceProjectRoutes);

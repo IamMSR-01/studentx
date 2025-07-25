@@ -17,6 +17,7 @@ import Resources from "./pages/Resources.jsx";
 import PaymentMethods from "./pages/PaymentMethod.jsx";
 import Mentorship from "./pages/Mentorship.jsx";
 import FreelanceMarketplace from "./pages/FreelanceMarketplace.jsx";
+import ChatBot from "./components/ChatBot.jsx";
 
 const router = createBrowserRouter([
   {
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
       {
         path: "/freelance-marketplace",
         element: <FreelanceMarketplace />
+      },
+      {
+        path: "/chat-bot",
+        element: <ChatBot />
       }
     ],
   },
